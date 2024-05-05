@@ -1,0 +1,107 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <!-- Theme Made By www.w3schools.com - No Copyright -->
+  <title>Elizabeth Choi</title>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css">
+  <link href="https://fonts.googleapis.com/css?family=Lato" rel="stylesheet" type="text/css">
+  <link href="https://fonts.googleapis.com/css?family=Montserrat" rel="stylesheet" type="text/css">
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.7.1/jquery.min.js"></script>
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/js/bootstrap.min.js"></script>
+  <link rel="stylesheet" a href="portfolio-final/mycss.css">
+  
+</head>
+<body id="myPage" data-spy="scroll" data-target=".navbar" data-offset="50">
+
+<nav class="navbar navbar-default navbar-fixed-top">
+  <div class="container-fluid">
+    <div class="navbar-header">
+      <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#myNavbar">
+        <span class="icon-bar"></span>
+        <span class="icon-bar"></span>
+        <span class="icon-bar"></span>                        
+      </button>
+      <a class="navbar-brand" href="#myPage">Home</a>
+    </div>
+    <div class="collapse navbar-collapse" id="myNavbar">
+      <ul class="nav navbar-nav navbar-right">
+        <li class="active"><a href="#myPage">ABOUT ME</a></li>
+        <li class="dropdown">
+            <a class="dropdown-toggle" data-toggle="dropdown" href="#">EXPERIENCES
+            <span class="caret"></span></a>
+            <ul class="dropdown-menu">
+              <li><a href="portfolio-final/academics.html">ACADEMICS</a></li>
+              <li><a href="portfolio-final/work.html">WORK</a></li>
+              <li><a href="portfolio-final/projects.html">PROJECTS</a></li></ul>
+        <li><a href="portfolio-final/timeline.html">TIMELINE</a></li>
+        <li><img src="portfolio-final/mylogo-white.PNG" style="width:38px;padding-top:13px;padding-right:20px"></span></a></li>
+      </ul>
+    </div>
+  </div>
+</nav>
+
+<!-- Container (The OVERVIEW Section) -->
+<div id="overview" class="container text-center">
+  <h3>ELIZABETH CHOI</h3>
+  <p>CLASS OF 2024 |  Wellesley College</p>
+  <p>Pre-med student majoring in
+  <br>Cognitive & Linguistic Sciences 
+      <br> with a concentration in Computer Science</p>
+    <br>
+    <h3 style="font-size:13px"> Guitar newbie • Coffee lover • Volleyball enthusiast </h4>
+    <div> <img src="portfolio-final/pp-small.jpg" class="img-rectangle-photo" alt="Profile Pic" width="500px"></a></div>
+  <br>
+</div>
+
+<!-- Container (Contact Section) -->
+<div id="contact" class="container" style="padding-top:20px">
+  <h3 class="text-center">Contact Info</h3>
+  <div class="thumbnail" style="text-align: center;">
+    <p>Elizabeth Choi</p>
+    <p><a href="mailto:ec6@wellesley.edu">ec6@wellesley.edu</a></p>
+    <p>240-321-9226</p>
+  </div>
+</div>
+<!-- Footer -->
+<footer class="text-center">
+    <a class="up-arrow" href="#myPage" data-toggle="tooltip" title="TO TOP">
+      <span class="glyphicon glyphicon-chevron-up"></span>
+    </a><br><br>
+    <p>Website Made By <a href="www.linkedin.com/in/elizabethchoi00" data-toggle="tooltip" title="Visit my LinkedIn page"> Elizabeth Choi</a></p> 
+  </footer>
+
+<script>
+$(document).ready(function(){
+  // Initialize Tooltip
+  $('[data-toggle="tooltip"]').tooltip(); 
+  
+  // Add smooth scrolling to all links in navbar + footer link
+  $(".navbar a, footer a[href='#myPage']").on('click', function(event) {
+
+    // Make sure this.hash has a value before overriding default behavior
+    if (this.hash !== "") {
+
+      // Prevent default anchor click behavior
+      event.preventDefault();
+
+      // Store hash
+      var hash = this.hash;
+
+      // Using jQuery's animate() method to add smooth page scroll
+      // The optional number (900) specifies the number of milliseconds it takes to scroll to the specified area
+      $('html, body').animate({
+        scrollTop: $(hash).offset().top
+      }, 900, function(){
+   
+        // Add hash (#) to URL when done scrolling (default click behavior)
+        window.location.hash = hash;
+      });
+    } // End if
+  });
+})
+</script>
+
+</html>

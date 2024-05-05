@@ -1,0 +1,135 @@
+
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <!-- Theme Made By www.w3schools.com - No Copyright -->
+  <title>Elizabeth Choi</title>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css">
+  <link href="https://fonts.googleapis.com/css?family=Lato" rel="stylesheet" type="text/css">
+  <link href="https://fonts.googleapis.com/css?family=Montserrat" rel="stylesheet" type="text/css">
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.7.1/jquery.min.js"></script>
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/js/bootstrap.min.js"></script>
+  <link rel="stylesheet" href="mycss.css">
+  
+</head>
+<body id="myPage" data-spy="scroll" data-target=".navbar" data-offset="50">
+
+<nav class="navbar navbar-default navbar-fixed-top">
+  <div class="container-fluid">
+    <div class="navbar-header">
+      <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#myNavbar">
+        <span class="icon-bar"></span>
+        <span class="icon-bar"></span>
+        <span class="icon-bar"></span>                        
+      </button>
+      <a class="navbar-brand" href="../index.html">Home</a>
+    </div>
+    <div class="collapse navbar-collapse" id="myNavbar">
+      <ul class="nav navbar-nav navbar-right">
+        <li><a href="../index.html">ABOUT ME</a></li>
+        <li class="dropdown">
+            <a class="dropdown-toggle" data-toggle="dropdown" href="#">EXPERIENCES
+            <span class="caret"></span></a>
+            <ul class="dropdown-menu">
+              <li><a href="academics.html">ACADEMICS</a></li>
+              <li><a href="work.html">WORK</a></li>
+              <li class="active"><a href="#myPage">PROJECTS</a></li></ul>
+        <li><a href="timeline.html">TIMELINE</a></li>
+        <li><img src="mylogo-white.PNG" style="width:38px;padding-top:13px;padding-right:20px"></span></a></li>
+      </ul>
+    </div>
+  </div>
+</nav>
+
+
+<!-- Container (PROJECTS Section) -->
+<div id="myprojects" class="container">
+  
+  <h3 class="text-center">MY PROJECTS</h3>  
+  <ul class="nav nav-tabs">
+    <li class="active"><a data-toggle="tab" href="#hci">Wellesley Wayfinder</a></li>
+    <li><a data-toggle="tab" href="#tui">NAPtivator</a></li>
+  </ul>
+
+  <div class="tab-content">
+    <div id="hci" class="tab-pane fade in active">
+      <h2>Wellesley Wayfinder</h2>
+      <p>An app designed to help first-years at Wellesley College navigate campus and alleviate feelings of being lost and late.</p>
+      <p>Check out the project website <a target="_blank" href="https://cs.wellesley.edu/~cs220team1/index.html">here.</a></p>
+      <p>View the prototype <a target="_blank" href="https://www.figma.com/proto/TqibxKFmauhfIet2nDJ2HU/P3-Prototype?node-id=11-32&starting-point-node-id=11%3A32">here</a></p>
+      <div class="row">
+        <div class="col-sm-4">
+            <p> <img src="hci.png" class="img-rectangle-photo" alt="HCI Project" width="300px"></a></p>
+        </div>
+        <div class="col-sm-4">
+            <p><img src="hci3.png" class="img-rectangle-photo" alt="HCI Project" width="300px"></a></p>
+        </div>
+        <div class="col-sm-4"> 
+          <p><img src="hci4.png" class="img-rectangle-photo" alt="HCI Project" width="300px"></a></p>
+        </div>
+      </div>
+    </div>
+    <div id="tui" class="tab-pane fade">
+      <h2>NAPtivator</h2>
+      <p>A tangible user interface: a headband that can serve as a GPS-based alarm system to gently vibrate when user arrives at destination.</p>
+      <p>Project website linked <a href="https://emmalim.github.io/naptivator/">here.</a></p>
+      <div class="row">
+        <div class="col-sm-4">
+            <p> <img src="tui unzipped.JPG" class="img-rectangle-photo" alt="TUI Project" width="300px"></a></p>
+        </div>
+        <div class="col-sm-4">
+            <p><img src="tui zipped.JPG" class="img-rectangle-photo" alt="TUI Project" width="300px"></a></p>
+        </div>
+        <div class="col-sm-4">
+          <p><img src="tui zipped flap.JPG" class="img-rectangle-photo" alt="TUI Project" width="300px"></a></p>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+
+
+<!-- Footer -->
+<footer class="text-center">
+  <a class="up-arrow" href="#myPage" data-toggle="tooltip" title="TO TOP">
+    <span class="glyphicon glyphicon-chevron-up"></span>
+  </a><br><br>
+  <p>Website Made By <a href="www.linkedin.com/in/elizabethchoi00" data-toggle="tooltip" title="Visit my LinkedIn page"> Elizabeth Choi</a></p> 
+</footer>
+
+<script>
+$(document).ready(function(){
+  // Initialize Tooltip
+  $('[data-toggle="tooltip"]').tooltip(); 
+  
+  // Add smooth scrolling to all links in navbar + footer link
+  $(".navbar a, footer a[href='#myPage']").on('click', function(event) {
+
+    // Make sure this.hash has a value before overriding default behavior
+    if (this.hash !== "") {
+
+      // Prevent default anchor click behavior
+      event.preventDefault();
+
+      // Store hash
+      var hash = this.hash;
+
+      // Using jQuery's animate() method to add smooth page scroll
+      // The optional number (900) specifies the number of milliseconds it takes to scroll to the specified area
+      $('html, body').animate({
+        scrollTop: $(hash).offset().top
+      }, 900, function(){
+   
+        // Add hash (#) to URL when done scrolling (default click behavior)
+        window.location.hash = hash;
+      });
+    } // End if
+  });
+})
+</script>
+
+</body>
+</html>
